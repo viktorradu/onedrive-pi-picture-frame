@@ -1,0 +1,1 @@
+scp -r c:/temp/images zenith@192.168.107.81:/home/wall1/onedrive-pi-picture-frame/cache
