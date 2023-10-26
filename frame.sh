@@ -1,4 +1,18 @@
-#!/bin/sh
-INTERVAL_SECONDS=5
+#!/bin/bash
 
-fbi -a -noverbose -blend 200 -t 10 "cache/proto.jpeg" "cache/proto2.jpg"
+clear
+
+nohup bash update.sh &
+
+trap cleanup SIGINT
+
+cleanup () {
+    pkill -f "bash update.sh"
+    exit
+}
+
+while true
+do
+    fbi -a -noverbose -blend 200 -u -t 3 -1 -l index
+done
+
