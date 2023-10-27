@@ -4,7 +4,7 @@ cd /home/wall1/onedrive-pi-picture-frame
 
 clear
 
-setterm -powersave off -blank
+setterm -powersave off -blank 0
 
 fbi -T 2 -a -noverbose -blend 200 -u -t 300 -1 -l ./index > /dev/null 2>&1
 
